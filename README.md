@@ -1,0 +1,2 @@
+# MINITHON-hackathon-project
+Smart Campus Dashboard
