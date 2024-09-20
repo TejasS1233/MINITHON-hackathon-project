@@ -4,22 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-header {
-    background-color: #1d62d0;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-nav {
-    margin: 20px 0;
-}
 
-nav a {
-    margin: 0 15px;
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-}
 
 body {
     font-family: 'Arial', sans-serif;

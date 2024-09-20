@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map Integration</title>
+
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <style>
+        #map {
+            height: 500px;
+            width: 90%;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Buses</h1>
+    <div id="map"></div>
+
+    <!-- Include Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize the map and center it at Marker 1 (TSEC)
+        const map = L.map('map').setView([19.0645, 72.8358], 14); 
+
+        // Add OpenStreetMap tiles to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Marker 1 (TSEC) with default marker icon
+        const marker1 = L.marker([19.0645, 72.8358]).addTo(map)
+            .bindPopup('TSEC')
+            .openPopup();
+           
+        // Custom icons for other markers
+        const customIcon = L.icon({
+            iconUrl: 'pin.png',
+            iconSize: [25, 41],     // size of the icon
+            iconAnchor: [12, 41],   // point of the icon which will correspond to marker's location
+            popupAnchor: [1, -34],  // point from which the popup should open relative to the iconAnchor
+        });
+
+        const marker2 = L.marker([19.063223, 72.835549], { icon: customIcon }).addTo(map)
+            .bindPopup('National College Bus Stop');
+
+        const marker3 = L.marker([19.0606982, 72.8336946], { icon: customIcon }).addTo(map)
+            .bindPopup('Bandra Station Bus Stop');
+
+        const marker4 = L.marker([19.072411, 72.8283779], { icon: customIcon }).addTo(map)
+            .bindPopup('Khar Road');
+
+        const marker5 = L.marker([19.060698, 72.8317539], { icon: customIcon }).addTo(map)
+            .bindPopup('Bandra East');
+
+        // Automatically adjust the map to fit all markers
+        const group = L.featureGroup([marker1, marker2, marker3, marker4, marker5]);
+        map.fitBounds(group.getBounds());
+    </script>
+
+</body>
+</html>

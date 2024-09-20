@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Bus Tracking</title>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+    </script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Bus Tracking</h1>
+    <div id="map"></div>
+
+    <script>
+        let map, directionsService, directionsRenderer;
+
+        // Initialize the map
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 28.6139, lng: 77.2090 },  // Delhi as default center
+                zoom: 12
+            });
+
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+            trackBus();  // Call the function to track the bus
+        }
+
+        // Function to get live bus data (sample: replace with real-time API call)
+        function trackBus() {
+            const busLocation = { lat: 28.7041, lng: 77.1025 };  // Example: Live bus location
+
+            // Add a marker for the live bus location
+            const busMarker = new google.maps.Marker({
+                position: busLocation,
+                map: map,
+                title: 'Bus Location'
+            });
+
+            // Example of showing a bus route (Delhi example route)
+            const request = {
+                origin: 'Delhi Gate, New Delhi',  // Starting point of the bus route
+                destination: 'Kashmere Gate, New Delhi',  // Destination
+                travelMode: 'TRANSIT',
+                transitOptions: {
+                    modes: ['BUS']  // Restrict to buses
+                }
+            };
+
+            directionsService.route(request, (result, status) => {
+                if (status === 'OK') {
+                    directionsRenderer.setDirections(result);
+                } else {
+                    console.error('Error fetching directions:', status);
+                }
+            });
+
+            // Simulate bus moving (you'll replace this with a real-time API)
+            setTimeout(() => {
+                const newBusLocation = { lat: 28.7100, lng: 77.1075 };  // Simulate bus moving
+                busMarker.setPosition(newBusLocation);  // Update bus position
+            }, 5000);  // Update every 5 seconds (or based on real-time API)
+        }
+
+        // Load the map on window load
+        window.onload = initMap;
+    </script>
+</body>
+</html>
