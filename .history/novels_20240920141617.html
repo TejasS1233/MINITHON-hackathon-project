@@ -11,24 +11,6 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #1d62d0;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            margin: 20px 0;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: #ffffff;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
 
         .content {
             max-width: 1200px;
@@ -115,15 +97,32 @@
             margin: 20px auto;
             padding: 10px 20px;
             font-size: 16px;
-            cursor: pointer;
-            background-color: #007BFF;
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        header {
+            background-color: #1d62d0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
         }
 
         .submit-button:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
         }
 
         .result {
@@ -138,7 +137,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #cce0ff;
+            background-color: #e0eae9;
             padding-top: 20px;
         }
 
@@ -148,12 +147,12 @@
             font-size: 18px;
             color: #141313;
             display: block;
-            font-weight: bold;
         }
 
         .sidebar a:hover {
             background-color: #306899;
         }
+    </style
     </style>
 </head>
 <body>
@@ -162,7 +161,7 @@
         <nav>
             <a href="Home.html">Home</a>
             <a href="Event.html">Events</a>
-            <a href="comics.html">Library</a>
+            <a href="Rishit.html">Library</a>
             <a href="bustracking.html">Transport</a>
             <a href="cafe.html">Cafeteria</a>
             <a href="annoucementpage.html">Announcements</a>
@@ -173,85 +172,92 @@
         <a href="comics.html">Comics</a>
         <a href="novels.html">Novels</a>
     </div>
+
     <div class="content">
-        <h2>Featured Comics</h2>
+        <h2>Featured Novels</h2>
         <div class="grid-container">
             <div class="grid-item">
-                <a href="xmen.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7183.jpg" alt="X-Men By Gerry Duggan Vol. 4">
-                    <b>X-Men By Gerry Duggan Vol. 4</b>
+                <a href="Harry_Potter_and_the_Deathly_Hallows.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg" alt="Harry Potter and the Deathly Hallows">
+                    <b>Harry Potter and the Deathly Hallows<br></b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('xmen', 1)">+</button>
-                    <input type="text" id="xmen" value="0" readonly>
-                    <button onclick="cq('xmen', -1)">-</button>
+                    <button onclick="changeQuantity('hp', 1)">+</button>
+                    <input type="text" id="hp" value="0" readonly>
+                    <button onclick="changeQuantity('hp', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="fantasticfour.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7211.jpg" alt="Marvel Masterworks: The Fantastic Four Vol. 2">
-                    <b>Marvel Masterworks: The Fantastic Four Vol. 2</b>
+                <a href="And_Then_There_Were_None.html">
+                    <img src="https://agathachristie.imgix.net/hcus-paperback/Jacket_AndThenThereWereNoneUS.jpg?auto=compress,format&fit=clip&q=80&w=400" alt="And Then There Were None">
+                    <b>And Then There Were None</b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('fantasticfour', 1)">+</button>
-                    <input type="text" id="fantasticfour" value="0" readonly>
-                    <button onclick="cq('fantasticfour', -1)">-</button>
+                    <button onclick="changeQuantity('at', 1)">+</button>
+                    <input type="text" id="at" value="0" readonly>
+                    <button onclick="changeQuantity('at', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="deadpool.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/09/TCBS7102.jpg" alt="Deadpool & Wolverine: WWIII #1 Todd Nauck Window Shades Variant Comic Book">
-                    <b>Deadpool & Wolverine<br><br></b>
+                <a href="The_Girl_on_the_Train.html">
+                    <img src="https://m.media-amazon.com/images/I/51aUSnfAfHL._SY445_SX342_.jpg" alt="The Girl on the Train">
+                    <b>The Girl on the Train<br><br></b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('deadpool', 1)">+</button>
-                    <input type="text" id="deadpool" value="0" readonly>
-                    <button onclick="cq('deadpool', -1)">-</button>
+                    <button onclick="changeQuantity('gt', 1)">+</button>
+                    <input type="text" id="gt" value="0" readonly>
+                    <button onclick="changeQuantity('gt', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="hulk.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/09/TCBS7067-scaled.jpg" alt="Hulk #6 Comic Book">
-                    <b>Hulk #6 Comic Book<br><br></b>
+                <a href="The_Night_Circus.html">
+                    <img src="https://m.media-amazon.com/images/I/815D5sneiNL._SY522_.jpg" alt="The Night Circus">
+                    <b>The Night Circus<br><br></b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('hulk', 1)">+</button>
-                    <input type="text" id="hulk" value="0" readonly>
-                    <button onclick="cq('hulk', -1)">-</button>
+                    <button onclick="changeQuantity('nc', 1)">+</button>
+                    <input type="text" id="nc" value="0" readonly>
+                    <button onclick="changeQuantity('nc', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="spiderman.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7184.jpg" alt="The World According to Spider-Man">
-                    <b>The World According to Spider-Man</b>
+                <a href="To_Kill_a_Mockingbird.html">
+                    <img src="https://m.media-amazon.com/images/I/51Z9p5AecCL._SY445_SX342_.jpg" alt="To Kill a Mockingbird">
+                    <b>To Kill a Mockingbird<br><br></b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('spiderman', 1)">+</button>
-                    <input type="text" id="spiderman" value="0" readonly>
-                    <button onclick="cq('spiderman', -1)">-</button>
+                    <button onclick="changeQuantity('tk', 1)">+</button>
+                    <input type="text" id="tk" value="0" readonly>
+                    <button onclick="changeQuantity('tk', -1)">-</button>
                 </div>
             </div>
         </div>
         <button class="submit-button" onclick="submitBooks()">Submit</button>
-        <div class="result" id="result"></div>
+        <div class="result" id="result">Number of books issued: 0</div>
     </div>
 
     <script>
-        function cq(id, change) {
-            const input = document.getElementById(id);
-            let current = parseInt(input.value);
-            current += change;
-            if (current < 0) current = 0;
-            input.value = current;
+        function changeQuantity(id, change) {
+            const inputField = document.getElementById(id);
+            let currentValue = parseInt(inputField.value);
+            currentValue += change;
+            if (currentValue < 0) currentValue = 0; 
+            inputField.value = currentValue;
         }
 
         function submitBooks() {
-            let totalBooks = 0;
-            const ids = ['xmen', 'fantasticfour', 'deadpool', 'hulk', 'spiderman'];
-            ids.forEach(id => {
-                totalBooks += parseInt(document.getElementById(id).value);
-            });
-            document.getElementById('result').innerText = `Number of books issued: ${totalBooks}`;
+            const books = {
+                'Harry Potter and the Deathly Hallows': parseInt(document.getElementById('hp').value),
+                'And Then There Were None': parseInt(document.getElementById('at').value),
+                'The Girl on the Train': parseInt(document.getElementById('gt').value),
+                'The Night Circus': parseInt(document.getElementById('nc').value),
+                'To Kill a Mockingbird': parseInt(document.getElementById('tk').value),
+            };
+            let totalIssued = 0;
+            for (const quantity of Object.values(books)) {
+                totalIssued += quantity;
+            }
+            document.getElementById('result').innerText = `Number of books issued: ${totalIssued}`;
         }
     </script>
 

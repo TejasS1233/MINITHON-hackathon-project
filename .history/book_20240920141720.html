@@ -11,24 +11,6 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #1d62d0;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            margin: 20px 0;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: #ffffff;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
 
         .content {
             max-width: 1200px;
@@ -59,6 +41,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             transition: background-color 0.3s ease;
+            position: relative;
         }
 
         .grid-item:hover {
@@ -112,25 +95,42 @@
 
         .submit-button {
             display: block;
-            margin: 20px auto;
+            margin: 30px auto;
             padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007BFF;
+            font-size: 18px;
+            background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
         }
 
         .submit-button:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
         }
 
-        .result {
+        .result-message {
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
             color: #333;
             margin-top: 20px;
+        }
+        header {
+            background-color: #1d62d0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
         }
         .sidebar {
             height: 100%;
@@ -148,12 +148,12 @@
             font-size: 18px;
             color: #141313;
             display: block;
-            font-weight: bold;
         }
 
         .sidebar a:hover {
             background-color: #306899;
         }
+    </style
     </style>
 </head>
 <body>
@@ -162,7 +162,7 @@
         <nav>
             <a href="Home.html">Home</a>
             <a href="Event.html">Events</a>
-            <a href="comics.html">Library</a>
+            <a href="Rishit.html">Library</a>
             <a href="bustracking.html">Transport</a>
             <a href="cafe.html">Cafeteria</a>
             <a href="annoucementpage.html">Announcements</a>
@@ -174,66 +174,67 @@
         <a href="novels.html">Novels</a>
     </div>
     <div class="content">
-        <h2>Featured Comics</h2>
+        <h2>Featured Books</h2>
         <div class="grid-container">
             <div class="grid-item">
-                <a href="xmen.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7183.jpg" alt="X-Men By Gerry Duggan Vol. 4">
-                    <b>X-Men By Gerry Duggan Vol. 4</b>
+                <a href="Rosen.html">
+                    <img src="https://m.media-amazon.com/images/I/51E75M0Rm5L._SY445_SX342_.jpg" alt="Discrete Mathematics And ITS Applications">
+                    <b>Discrete Mathematics And ITS Applications</b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('xmen', 1)">+</button>
-                    <input type="text" id="xmen" value="0" readonly>
-                    <button onclick="cq('xmen', -1)">-</button>
+                    <button onclick="cq('rosen', 1)">+</button>
+                    <input type="text" id="rosen" value="0" readonly>
+                    <button onclick="cq('rosen', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="fantasticfour.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7211.jpg" alt="Marvel Masterworks: The Fantastic Four Vol. 2">
-                    <b>Marvel Masterworks: The Fantastic Four Vol. 2</b>
+                <a href="DS.html">
+                    <img src="https://m.media-amazon.com/images/I/41+8x3tW5LL._SY445_SX342_.jpg" alt="Data Structures Using C 2E">
+                    <b>Data Structures Using C 2E</b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('fantasticfour', 1)">+</button>
-                    <input type="text" id="fantasticfour" value="0" readonly>
-                    <button onclick="cq('fantasticfour', -1)">-</button>
+                    <button onclick="cq('ds', 1)">+</button>
+                    <input type="text" id="ds" value="0" readonly>
+                    <button onclick="cq('ds', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="deadpool.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/09/TCBS7102.jpg" alt="Deadpool & Wolverine: WWIII #1 Todd Nauck Window Shades Variant Comic Book">
-                    <b>Deadpool & Wolverine<br><br></b>
+                <a href="CG.html">
+                    <img src="https://m.media-amazon.com/images/I/31beXq+NgHL.jpg" alt="Computer Graphics">
+                    <b>Computer Graphics<br><br></b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('deadpool', 1)">+</button>
-                    <input type="text" id="deadpool" value="0" readonly>
-                    <button onclick="cq('deadpool', -1)">-</button>
+                    <button onclick="cq('cg', 1)">+</button>
+                    <input type="text" id="cg" value="0" readonly>
+                    <button onclick="cq('cg', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="hulk.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/09/TCBS7067-scaled.jpg" alt="Hulk #6 Comic Book">
-                    <b>Hulk #6 Comic Book<br><br></b>
+                <a href="EM3.html">
+                    <img src="https://m.media-amazon.com/images/I/51o7LjFv7hL._SY445_SX342_.jpg" alt="Engineering Mathematics-III G V Kumbhojkar">
+                    <b>Engineering Mathematics-III G V Kumbhojkar</b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('hulk', 1)">+</button>
-                    <input type="text" id="hulk" value="0" readonly>
-                    <button onclick="cq('hulk', -1)">-</button>
+                    <button onclick="cq('em3', 1)">+</button>
+                    <input type="text" id="em3" value="0" readonly>
+                    <button onclick="cq('em3', -1)">-</button>
                 </div>
             </div>
             <div class="grid-item">
-                <a href="spiderman.html">
-                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7184.jpg" alt="The World According to Spider-Man">
-                    <b>The World According to Spider-Man</b>
+                <a href="digitaldesign.html">
+                    <img src="https://m.media-amazon.com/images/I/51Osq0HiCyL._SY445_SX342_.jpg" alt="Digital Design: With an Introduction to the Verilog HDL, VHDL, and System Verilog">
+                    <b>Digital Design<br><br></b>
                 </a>
                 <div class="quantity-controls">
-                    <button onclick="cq('spiderman', 1)">+</button>
-                    <input type="text" id="spiderman" value="0" readonly>
-                    <button onclick="cq('spiderman', -1)">-</button>
+                    <button onclick="cq('digitaldesign', 1)">+</button>
+                    <input type="text" id="digitaldesign" value="0" readonly>
+                    <button onclick="cq('digitaldesign', -1)">-</button>
                 </div>
             </div>
         </div>
+        
         <button class="submit-button" onclick="submitBooks()">Submit</button>
-        <div class="result" id="result"></div>
+        <div class="result-message" id="resultMessage"></div>
     </div>
 
     <script>
@@ -246,12 +247,12 @@
         }
 
         function submitBooks() {
+            const bookIds = ['rosen', 'ds', 'cg', 'em3', 'digitaldesign'];
             let totalBooks = 0;
-            const ids = ['xmen', 'fantasticfour', 'deadpool', 'hulk', 'spiderman'];
-            ids.forEach(id => {
+            bookIds.forEach(id => {
                 totalBooks += parseInt(document.getElementById(id).value);
             });
-            document.getElementById('result').innerText = `Number of books issued: ${totalBooks}`;
+            document.getElementById('resultMessage').innerText = `Number of books issued: ${totalBooks}`;
         }
     </script>
 

@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Library</title>
     <style>
-        h1
-        {
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            transition: margin-left 0.3s;
+        }
+        h1 {
             text-align: center;
         }
         header {
@@ -26,14 +29,21 @@
             font-weight: bold;
             text-decoration: none;
         }
+
         .sidebar {
             height: 100%;
             width: 200px;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #cce0ff;
+            background-color: #e0eae9;
             padding-top: 20px;
+            transition: width 0.3s;
+            overflow: hidden;
+        }
+
+        .sidebar.collapsed {
+            width: 60px;
         }
 
         .sidebar a {
@@ -42,32 +52,31 @@
             font-size: 18px;
             color: #141313;
             display: block;
-            font-weight: bold;   
         }
 
         .sidebar a:hover {
             background-color: #306899;
         }
-        
+
         .content {
             margin-left: 220px; 
             padding: 20px;
+            transition: margin-left 0.3s;
         }
 
-        h1.centered {
-            text-align: center;
+        .content.collapsed {
+            margin-left: 80px; /* Adjusted for the collapsed sidebar */
         }
 
-        .info-container {
+        .info-container, .facilities-container {
             background-color: #f9f9f9;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
-            margin-bottom: 25px;
         }
 
-        .info-container h2 {
+        .info-container h2, .facilities-container h2 {
             text-align: center;
             color: #333;
         }
@@ -75,17 +84,6 @@
         .info-container p {
             text-align: justify;
             color: #555;
-        }
-
-        .facilities-container {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            width: 40%;
-            display: inline-block;
-            margin-left: 60px;
         }
 
         .facilities-container ul {
@@ -96,11 +94,18 @@
 
         .facilities-container li {
             margin: 8px 0;
-            text-align: left;
+            text-align: center;
         }
-        :root
-        {
-            font-family: Arial, Helvetica, sans-serif;
+
+        #toggleButton {
+            position: absolute;
+            top: 20px;
+            left: 220px; /* Initial position */
+            padding: 10px;
+            background-color: #1d62d0;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -118,14 +123,15 @@
     </header>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <a href="book.html">Books</a>
         <a href="comics.html">Comics</a>
         <a href="novels.html">Novels</a>
     </div>
 
     <!-- Main content -->
-    <div class="content">
+    <div class="content" id="content">
+        <button id="toggleButton" onclick="toggleSidebar()">☰</button>
 
         <!-- Info Container -->
         <div class="info-container">
@@ -136,7 +142,7 @@
         <!-- Facilities Container -->
         <div class="facilities-container">
             <h2>Library Facilities</h2>
-            <ul style="list-style: circle;">
+            <ul>
                 <li>Book Bank</li>
                 <li>Fiction</li>
                 <li>E-Resources</li>
@@ -145,17 +151,19 @@
                 <li>Photocopying</li>
             </ul>
         </div>
-        <div class="facilities-container">
-            <h2>Library Faculty</h2>
-            <ul style="list-style: circle;">
-                <li>Mrs. Shubhada Shedge </li>
-                <li>Ms. Renu Punwani </li>
-                <li>Mr. Manvendra Dhimate </li>
-                <li>Mr. Raghvendra Prasad Shukla </li>
-                <li>Mr. Suryanarayan Singh </li>
-                <li>Mr. Deviprasad Verma </li>
-            </ul>
-        </div>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            sidebar.classList.toggle('collapsed');
+            content.classList.toggle('collapsed');
+
+            // Update button position
+            const toggleButton = document.getElementById('toggleButton');
+            toggleButton.style.left = sidebar.classList.contains('collapsed') ? '80px' : '220px';
+        }
+    </script>
 </body>
 </html>
