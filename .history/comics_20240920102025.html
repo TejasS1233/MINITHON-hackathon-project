@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-item:hover {
+            background-color: #eef6ff;
+        }
+
+        .grid-item img {
+            width: 150px;
+            height: 220px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .grid-item b {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .quantity-controls button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        .quantity-controls input {
+            width: 40px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Featured Comics</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="xmen.html">
+                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7183.jpg" alt="X-Men By Gerry Duggan Vol. 4">
+                    <b>X-Men By Gerry Duggan Vol. 4</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('xmen', 1)">+</button>
+                    <input type="text" id="xmen" value="0" readonly>
+                    <button onclick="cq('xmen', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="fantasticfour.html">
+                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7211.jpg" alt="Marvel Masterworks: The Fantastic Four Vol. 2">
+                    <b>Marvel Masterworks: The Fantastic Four Vol. 2</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('fantasticfour', 1)">+</button>
+                    <input type="text" id="fantasticfour" value="0" readonly>
+                    <button onclick="cq('fantasticfour', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="deadpool.html">
+                    <img src="https://thecomicbookstore.in/storage/2024/09/TCBS7102.jpg" alt="Deadpool & Wolverine: WWIII #1 Todd Nauck Window Shades Variant Comic Book">
+                    <b>Deadpool & Wolverine: WWIII #1 Todd Nauck Window Shades Variant Comic Book</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('deadpool', 1)">+</button>
+                    <input type="text" id="deadpool" value="0" readonly>
+                    <button onclick="cq('deadpool', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="hulk.html">
+                    <img src="https://thecomicbookstore.in/storage/2024/09/TCBS7067-scaled.jpg" alt="Hulk #6 Comic Book">
+                    <b>Hulk #6 Comic Book</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('hulk', 1)">+</button>
+                    <input type="text" id="hulk" value="0" readonly>
+                    <button onclick="cq('hulk', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="spiderman.html">
+                    <img src="https://thecomicbookstore.in/storage/2024/08/TCBS7184.jpg" alt="The World According to Spider-Man">
+                    <b>The World According to Spider-Man</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('spiderman', 1)">+</button>
+                    <input type="text" id="spiderman" value="0" readonly>
+                    <button onclick="cq('spiderman', -1)">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cq(id, change) {
+            const input = document.getElementById(id);
+            let current = parseInt(input.value);
+            current += change;
+            if (current < 0) current = 0;
+            input.value = current;
+        }
+    </script>
+
+</body>
+</html>

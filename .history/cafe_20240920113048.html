@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-item:hover {
+            background-color: #eef6ff;
+        }
+
+        .grid-item img {
+            width: 150px;
+            height: 220px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .grid-item b {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .nutrition-info {
+            font-size: 14px;
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Cafeteria</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2009/08/vada-pav-recipe.jpg">
+                <b>Vada Pav</b>
+                <div class="nutrition-info">Calories: 250 | Protein: 5g | Carbs: 35g | Fat: 10g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Foaming_filter_coffee.jpg/330px-Foaming_filter_coffee.jpg">
+                <b>Coffee</b>
+                <div class="nutrition-info">Calories: 2 | Protein: 0g | Carbs: 0g | Fat: 0g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Bambayya_Pav_bhaji.jpg/330px-Bambayya_Pav_bhaji.jpg">
+                <b>Pav Bhaji</b>
+                <div class="nutrition-info">Calories: 300 | Protein: 8g | Carbs: 40g | Fat: 15g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2011/06/misal-pav.jpg">
+                <b>Misal Pav</b>
+                <div class="nutrition-info">Calories: 350 | Protein: 12g | Carbs: 45g | Fat: 18g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/12/fried-rice-recipe.jpg">
+                <b>Fried Rice</b>
+                <div class="nutrition-info">Calories: 220 | Protein: 5g | Carbs: 40g | Fat: 6g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://t3.ftcdn.net/jpg/07/82/00/24/240_F_782002404_4rgWmEApJul5vSbpmQpWMobWW2GmT3nd.jpg">
+                <b>Poha</b>
+                <div class="nutrition-info">Calories: 350 | Protein: 12g | Carbs: 45g | Fat: 18g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSy8wmV52YHUbrwyK63cBsjHmWSroGxP_ooSmyAzhtctmb-2AVkm1b-KycjhDnXXZLT6gfW7ildlDTXglJjeM5eMta7qIx4qnxx7OiNh3-0WkFi9rJVrJbj">
+                <b>Appy Fizz</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.cookwithmanali.com/wp-content/uploads/2021/08/Schezwan-Noodles-1014x1536.jpg">
+                <b>Schezwan Noodles</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://m.media-amazon.com/images/I/41uHXOjZJZL._SX300_SY300_QL70_FMwebp_.jpg">
+                <b>Coca-Cola</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://m.media-amazon.com/images/I/41fOtDn6kHL._SX300_SY300_QL70_FMwebp_.jpg">
+                <b>Amul Smoodh</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

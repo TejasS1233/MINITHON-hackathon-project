@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-item:hover {
+            background-color: #eef6ff;
+        }
+
+        .grid-item img {
+            width: 150px;
+            height: 220px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .grid-item b {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .nutrition-info {
+            font-size: 14px;
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Cafeteria</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2009/08/vada-pav-recipe.jpg">
+                <b>Vada Pav</b>
+                <div class="nutrition-info">Calories: 250 | Protein: 5g | Carbs: 35g | Fat: 10g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Foaming_filter_coffee.jpg/330px-Foaming_filter_coffee.jpg">
+                <b>Coffee</b>
+                <div class="nutrition-info">Calories: 2 | Protein: 0g | Carbs: 0g | Fat: 0g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Bambayya_Pav_bhaji.jpg/330px-Bambayya_Pav_bhaji.jpg">
+                <b>Pav Bhaji</b>
+                <div class="nutrition-info">Calories: 300 | Protein: 8g | Carbs: 40g | Fat: 15g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2011/06/misal-pav.jpg">
+                <b>Misal Pav</b>
+                <div class="nutrition-info">Calories: 350 | Protein: 12g | Carbs: 45g | Fat: 18g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/12/fried-rice-recipe.jpg">
+                <b>Fried Rice</b>
+                <div class="nutrition-info">Calories: 220 | Protein: 5g | Carbs: 40g | Fat: 6g</div>
+            </div>
+            <div class="grid-item">
+                <img src="data:image/jpeg;base64,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">
+                <b>Poha</b>
+                <div class="nutrition-info">Calories: 350 | Protein: 12g | Carbs: 45g | Fat: 18g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSy8wmV52YHUbrwyK63cBsjHmWSroGxP_ooSmyAzhtctmb-2AVkm1b-KycjhDnXXZLT6gfW7ildlDTXglJjeM5eMta7qIx4qnxx7OiNh3-0WkFi9rJVrJbj">
+                <b>Appy Fizz</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.cookwithmanali.com/wp-content/uploads/2021/08/Schezwan-Noodles-1014x1536.jpg">
+                <b>Schezwan Noodles</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+            <div class="grid-item">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QDeRXhpZgAASUkqAAgAAAAFAA4BAgBrAAAASgAAAJiCAgARAAAAtQAAABIBAwABAAAAAQAAABoBBQABAAAAxgAAABsBBQABAAAAzgAAAAAAAABEdWJsaW4sIElyZWxhbmQgLSBNYXJjaCA5LCAyMDExOiBUd28gbGl0ZXIgYm90dGxlIG9mIENvY2EgQ29sYSwgYSBwb3B1bGFyIGZpenp5IGRyaW5rIGFsbCBhcm91bmQgdGhlIHdvcmxkLk9rdGF5IE9ydGFrY2lvZ2x1LAEAAAEAAAAsAQAAAQAAAP/tAMhQaG90b3Nob3AgMy4wADhCSU0EBAAAAAAAqxwCUAAPTWVkaWFQcm9kdWN0aW9uHAJ4AGtEdWJsaW4sIElyZWxhbmQgLSBNYXJjaCA5LCAyMDExOiBUd28gbGl0ZXIgYm90dGxlIG9mIENvY2EgQ29sYSwgYSBwb3B1bGFyIGZpenp5IGRyaW5rIGFsbCBhcm91bmQgdGhlIHdvcmxkLhwCdAART2t0YXkgT3J0YWtjaW9nbHUcAm4ADEdldHR5IEltYWdlcwD/4QWFaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj4KCTxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CgkJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczpJcHRjNHhtcENvcmU9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBDb3JlLzEuMC94bWxucy8iICAgeG1sbnM6R2V0dHlJbWFnZXNHSUZUPSJodHRwOi8veG1wLmdldHR5aW1hZ2VzLmNvbS9naWZ0LzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGx1cz0iaHR0cDovL25zLnVzZXBsdXMub3JnL2xkZi94bXAvMS4wLyIgIHhtbG5zOmlwdGNFeHQ9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBFeHQvMjAwOC0wMi0yOS8iIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIGRjOlJpZ2h0cz0iT2t0YXkgT3J0YWtjaW9nbHUiIHBob3Rvc2hvcDpDcmVkaXQ9IkdldHR5IEltYWdlcyIgR2V0dHlJbWFnZXNHSUZUOkFzc2V0SUQ9IjQ1ODcwOTI4MSIgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iaHR0cHM6Ly93d3cuZ2V0dHlpbWFnZXMuY29tL2V1bGE/dXRtX21lZGl1bT1vcmdhbmljJmFtcDt1dG1fc291cmNlPWdvb2dsZSZhbXA7dXRtX2NhbXBhaWduPWlwdGN1cmwiID4KPGRjOmNyZWF0b3I+PHJkZjpTZXE+PHJkZjpsaT5NZWRpYVByb2R1Y3Rpb248L3JkZjpsaT48L3JkZjpTZXE+PC9kYzpjcmVhdG9yPjxkYzpkZXNjcmlwdGlvbj48cmRmOkFsdD48cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPkR1YmxpbiwgSXJlbGFuZCAtIE1hcmNoIDksIDIwMTE6IFR3byBsaXRlciBib3R0bGUgb2YgQ29jYSBDb2xhLCBhIHBvcHVsYXIgZml6enkgZHJpbmsgYWxsIGFyb3VuZCB0aGUgd29ybGQuPC9yZGY6bGk+PC9yZGY6QWx0PjwvZGM6ZGVzY3JpcHRpb24+CjxwbHVzOkxpY2Vuc29yPjxyZGY6U2VxPjxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPjxwbHVzOkxpY2Vuc29yVVJMPmh0dHBzOi8vd3d3LmdldHR5aW1hZ2VzLmNvbS9kZXRhaWwvNDU4NzA5MjgxP3V0bV9tZWRpdW09b3JnYW5pYyZhbXA7dXRtX3NvdXJjZT1nb29nbGUmYW1wO3V0bV9jYW1wYWlnbj1pcHRjdXJsPC9wbHVzOkxpY2Vuc29yVVJMPjwvcmRmOmxpPjwvcmRmOlNlcT48L3BsdXM6TGljZW5zb3I+CgkJPC9y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">
+                <b>Coca-Cola</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+            <div class="grid-item">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QDeRXhpZgAASUkqAAgAAAAFAA4BAgBrAAAASgAAAJiCAgARAAAAtQAAABIBAwABAAAAAQAAABoBBQABAAAAxgAAABsBBQABAAAAzgAAAAAAAABEdWJsaW4sIElyZWxhbmQgLSBNYXJjaCA5LCAyMDExOiBUd28gbGl0ZXIgYm90dGxlIG9mIENvY2EgQ29sYSwgYSBwb3B1bGFyIGZpenp5IGRyaW5rIGFsbCBhcm91bmQgdGhlIHdvcmxkLk9rdGF5IE9ydGFrY2lvZ2x1LAEAAAEAAAAsAQAAAQAAAP/tAMhQaG90b3Nob3AgMy4wADhCSU0EBAAAAAAAqxwCUAAPTWVkaWFQcm9kdWN0aW9uHAJ4AGtEdWJsaW4sIElyZWxhbmQgLSBNYXJjaCA5LCAyMDExOiBUd28gbGl0ZXIgYm90dGxlIG9mIENvY2EgQ29sYSwgYSBwb3B1bGFyIGZpenp5IGRyaW5rIGFsbCBhcm91bmQgdGhlIHdvcmxkLhwCdAART2t0YXkgT3J0YWtjaW9nbHUcAm4ADEdldHR5IEltYWdlcwD/4QWFaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj4KCTxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CgkJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczpJcHRjNHhtcENvcmU9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBDb3JlLzEuMC94bWxucy8iICAgeG1sbnM6R2V0dHlJbWFnZXNHSUZUPSJodHRwOi8veG1wLmdldHR5aW1hZ2VzLmNvbS9naWZ0LzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGx1cz0iaHR0cDovL25zLnVzZXBsdXMub3JnL2xkZi94bXAvMS4wLyIgIHhtbG5zOmlwdGNFeHQ9Imh0dHA6Ly9pcHRjLm9yZy9zdGQvSXB0YzR4bXBFeHQvMjAwOC0wMi0yOS8iIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIGRjOlJpZ2h0cz0iT2t0YXkgT3J0YWtjaW9nbHUiIHBob3Rvc2hvcDpDcmVkaXQ9IkdldHR5IEltYWdlcyIgR2V0dHlJbWFnZXNHSUZUOkFzc2V0SUQ9IjQ1ODcwOTI4MSIgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iaHR0cHM6Ly93d3cuZ2V0dHlpbWFnZXMuY29tL2V1bGE/dXRtX21lZGl1bT1vcmdhbmljJmFtcDt1dG1fc291cmNlPWdvb2dsZSZhbXA7dXRtX2NhbXBhaWduPWlwdGN1cmwiID4KPGRjOmNyZWF0b3I+PHJkZjpTZXE+PHJkZjpsaT5NZWRpYVByb2R1Y3Rpb248L3JkZjpsaT48L3JkZjpTZXE+PC9kYzpjcmVhdG9yPjxkYzpkZXNjcmlwdGlvbj48cmRmOkFsdD48cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPkR1YmxpbiwgSXJlbGFuZCAtIE1hcmNoIDksIDIwMTE6IFR3byBsaXRlciBib3R0bGUgb2YgQ29jYSBDb2xhLCBhIHBvcHVsYXIgZml6enkgZHJpbmsgYWxsIGFyb3VuZCB0aGUgd29ybGQuPC9yZGY6bGk+PC9yZGY6QWx0PjwvZGM6ZGVzY3JpcHRpb24+CjxwbHVzOkxpY2Vuc29yPjxyZGY6U2VxPjxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPjxwbHVzOkxpY2Vuc29yVVJMPmh0dHBzOi8vd3d3LmdldHR5aW1hZ2VzLmNvbS9kZXRhaWwvNDU4NzA5MjgxP3V0bV9tZWRpdW09b3JnYW5pYyZhbXA7dXRtX3NvdXJjZT1nb29nbGUmYW1wO3V0bV9jYW1wYWlnbj1pcHRjdXJsPC9wbHVzOkxpY2Vuc29yVVJMPjwvcmRmOmxpPjwvcmRmOlNlcT48L3BsdXM6TGljZW5zb3I+CgkJPC9y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">
+                <b>Coca-Cola</b>
+                <div class="nutrition-info">Calories: 51.8 | Protein: 12g | Carbs: 12.95g | Fat: 12.9g</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

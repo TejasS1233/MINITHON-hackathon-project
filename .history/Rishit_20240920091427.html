@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <style>
+        header 
+        {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .sidebar 
+        {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f0f0f0;
+            padding-top: 20px;
+        }
+        .sidebar a 
+        {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+        }
+        .sidebar a:hover 
+        {
+            background-color: #20b937;
+        }
+        
+        .content {
+            margin-left: 220px; /* Width of the sidebar + some spacing */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to E-Library</h1>
+    </header>
+
+    
+    <div class="sidebar">
+        <a href="#">Books</a>
+        <a href="#">Comics</a>
+        <a href="#">Novels</a>
+    </div>
+
+    
+    <div class="content">
+        <h2>Featured Books</h2>
+        <ul>
+            <li><a href="Harry_Potter_and_the_Deathly_Hallows.html">Harry Potter and the Deathly Hallows</a><br>
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg" height="150" width="100"></li>
+            <li><a href="And_Then_There_Were_None.html">And Then There Were None</a><br>
+                <img src="https://agathachristie.imgix.net/hcus-paperback/Jacket_AndThenThereWereNoneUS.jpg?auto=compress,format&fit=clip&q=80&w=400" height="150" width="100"></li>
+            <li><a href="The_Girl_on_the_Train.html">The Girl on the Train</a><br>
+                <img src="https://m.media-amazon.com/images/I/51aUSnfAfHL._SY445_SX342_.jpg" height="150" width="100"></li>
+            <li><a href="The_Night_Circus.html">The Night Circus</a><br>
+                <img src="https://m.media-amazon.com/images/I/815D5sneiNL._SY522_.jpg" height="150" width="100"></li>
+            <li><a href="To_Kill_a_Mockingbird.html">To Kill a Mockingbird</a><br>
+                <img src="https://m.media-amazon.com/images/I/51Z9p5AecCL._SY445_SX342_.jpg" height="150" width="100"></li>
+        </ul>
+    </div>
+</body>
+</html>

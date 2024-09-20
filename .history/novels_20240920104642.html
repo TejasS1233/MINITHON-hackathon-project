@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+           
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-item:hover {
+            background-color: #eef6ff;
+        }
+
+        .grid-item img {
+            width: 150px;
+            height: 220px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .grid-item b {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .quantity-controls {
+           
+            margin-top: 10px;
+        }
+
+        .quantity-controls button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        .quantity-controls input {
+           
+            width: 40px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h2>Featured Novels</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="Harry_Potter_and_the_Deathly_Hallows.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg" alt="Harry Potter and the Deathly Hallows">
+                    <b>Harry Potter and the Deathly Hallows<br></b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="changeQuantity('hp', 1)">+</button>
+                    <input type="text" id="hp" value="0" readonly>
+                    <button onclick="changeQuantity('hp', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="And_Then_There_Were_None.html">
+                    <img src="https://agathachristie.imgix.net/hcus-paperback/Jacket_AndThenThereWereNoneUS.jpg?auto=compress,format&fit=clip&q=80&w=400" alt="And Then There Were None">
+                    <b>And Then There Were None</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="changeQuantity('at', 1)">+</button>
+                    <input type="text" id="at" value="0" readonly>
+                    <button onclick="changeQuantity('at', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="The_Girl_on_the_Train.html">
+                    <img src="https://m.media-amazon.com/images/I/51aUSnfAfHL._SY445_SX342_.jpg" alt="The Girl on the Train">
+                    <b>The Girl on the Train<br><br></b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="changeQuantity('gt', 1)">+</button>
+                    <input type="text" id="gt" value="0" readonly>
+                    <button onclick="changeQuantity('gt', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="The_Night_Circus.html">
+                    <img src="https://m.media-amazon.com/images/I/815D5sneiNL._SY522_.jpg" alt="The Night Circus">
+                    <b>The Night Circus</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="changeQuantity('nc', 1)">+</button>
+                    <input type="text" id="nc" value="0" readonly>
+                    <button onclick="changeQuantity('nc', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="To_Kill_a_Mockingbird.html">
+                    <img src="https://m.media-amazon.com/images/I/51Z9p5AecCL._SY445_SX342_.jpg" alt="To Kill a Mockingbird">
+                    <b>To Kill a Mockingbird</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="changeQuantity('tk', 1)">+</button>
+                    <input type="text" id="tk" value="0" readonly>
+                    <button onclick="changeQuantity('tk', -1)">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeQuantity(id, change) {
+            const inputField = document.getElementById(id);
+            let currentValue = parseInt(inputField.value);
+            currentValue += change;
+            if (currentValue < 0) currentValue = 0; 
+            inputField.value = currentValue;
+        }
+    </script>
+
+</body>
+</html>

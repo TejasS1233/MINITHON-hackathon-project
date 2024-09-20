@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <style>
+        header {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #46ab9e;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #141313;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #306899;
+        }
+        
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+        }
+
+        h1.centered {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to E-Library</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#">Books</a>
+        <a href="#">Comics</a>
+        <a href="novels.html">Novels</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1 class="centered"><b>Welcome to E-Library</b></h1>
+    </div>
+</body>
+</html>

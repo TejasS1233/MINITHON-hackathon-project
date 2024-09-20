@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            position: relative;
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-item:hover {
+            background-color: #eef6ff;
+        }
+
+        .grid-item img {
+            width: 150px;
+            height: 220px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .grid-item b {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .quantity-controls {
+            position: absolute;
+            bottom:0;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .quantity-controls button {
+            
+            padding: 5px 10px;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        .quantity-controls input {
+            width: 40px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Featured Books</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="Rosen.html">
+                    <img src="https://m.media-amazon.com/images/I/51E75M0Rm5L._SY445_SX342_.jpg" alt="Discrete Mathematics And ITS Applications">
+                    <b>Discrete Mathematics And ITS Applications</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('rosen', 1)">+</button>
+                    <input type="text" id="rosen" value="0" readonly>
+                    <button onclick="cq('rosen', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="DS.html">
+                    <img src="https://m.media-amazon.com/images/I/41+8x3tW5LL._SY445_SX342_.jpg" alt="Data Structures Using C 2E">
+                    <b>Data Structures Using C 2E</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('ds', 1)">+</button>
+                    <input type="text" id="ds" value="0" readonly>
+                    <button onclick="cq('ds', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="CG.html">
+                    <img src="https://m.media-amazon.com/images/I/31beXq+NgHL.jpg" alt="Computer Graphics">
+                    <b>Computer Graphics</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('cg', 1)">+</button>
+                    <input type="text" id="cg" value="0" readonly>
+                    <button onclick="cq('cg', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="EM3.html">
+                    <img src="https://m.media-amazon.com/images/I/51o7LjFv7hL._SY445_SX342_.jpg" alt="Engineering Mathematics-III G V Kumbhojkar">
+                    <b>Engineering Mathematics-III G V Kumbhojkar<br><br><br><br></b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('em3', 1)">+</button>
+                    <input type="text" id="em3" value="0" readonly>
+                    <button onclick="cq('em3', -1)">-</button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a href="digitaldesign.html">
+                    <img src="https://m.media-amazon.com/images/I/51Osq0HiCyL._SY445_SX342_.jpg" alt="Digital Design: With an Introduction to the Verilog HDL, VHDL, and System Verilog">
+                    <b>Digital Design</b>
+                </a>
+                <div class="quantity-controls">
+                    <button onclick="cq('digitaldesign', 1)">+</button>
+                    <input type="text" id="digitaldesign" value="0" readonly>
+                    <button onclick="cq('digitaldesign', -1)">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cq(id, change) {
+            const input = document.getElementById(id);
+            let current = parseInt(input.value);
+            current += change;
+            if (current < 0) current = 0;
+            input.value = current;
+        }
+    </script>
+
+</body>
+</html>
